@@ -1,0 +1,446 @@
+/*==================================================
+        VARIABLES
+==================================================*/
+
+:root {
+  --pink: #f8d8e8;
+  --pink-soft: #fdeef5;
+  --purple: #dcc7f7;
+  --purple-dark: #9a6bb5;
+
+  --gold: #d4af37;
+
+  --text: #555;
+  --title: #5c4868;
+
+  --white: #ffffff;
+
+  --shadow: 0 15px 40px rgba(120, 80, 120, 0.15);
+
+  --radius: 28px;
+}
+
+/*==================================================
+        RESET
+==================================================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+
+  color: var(--text);
+
+  background: #fff8fc;
+
+  overflow-x: hidden;
+}
+
+/*==================================================
+        BACKGROUND
+==================================================*/
+
+.background {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: -1;
+
+  background:
+    radial-gradient(circle at top left, #ffffff, transparent 35%),
+    radial-gradient(circle at bottom right, #eadcff, transparent 40%),
+    linear-gradient(135deg, #fde8f3, #f7efff);
+}
+
+/*==================================================
+        HEADER
+==================================================*/
+
+header {
+  padding: 70px 20px 30px;
+}
+
+.hero {
+  max-width: 800px;
+
+  margin: auto;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  backdrop-filter: blur(15px);
+
+  padding: 40px 25px;
+
+  border-radius: 35px;
+
+  box-shadow: var(--shadow);
+}
+
+.subtitle {
+  color: #b06bb9;
+
+  letter-spacing: 3px;
+
+  font-size: 0.9rem;
+
+  text-transform: uppercase;
+
+  font-weight: 600;
+}
+
+.hero h1 {
+  margin: 15px 0;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: 4.5rem;
+
+  background: linear-gradient(
+    90deg,
+    #9b741c,
+    #f5d778,
+    #d4af37,
+    #fff2a8,
+    #9b741c
+  );
+
+  background-size: 300%;
+
+  color: transparent;
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  animation: gold 8s infinite linear;
+}
+
+@keyframes gold {
+  from {
+    background-position: 0%;
+  }
+
+  to {
+    background-position: 300%;
+  }
+}
+
+.hero p {
+  line-height: 1.8;
+
+  max-width: 600px;
+
+  margin: auto;
+}
+
+/*==================================================
+        FILTERS
+==================================================*/
+
+.filters {
+  display: flex;
+
+  gap: 12px;
+
+  padding: 25px 20px;
+
+  overflow-x: auto;
+
+  justify-content: center;
+}
+
+.filter {
+  border: none;
+
+  background: white;
+
+  padding: 12px 22px;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  color: #777;
+
+  white-space: nowrap;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s;
+}
+
+.filter:hover,
+.filter.active {
+  background: linear-gradient(135deg, #f4a7c7, #d9b8ff);
+
+  color: white;
+}
+
+/*==================================================
+        SEARCH
+==================================================*/
+
+.search-section {
+  padding: 10px 20px 35px;
+}
+
+.search-box {
+  max-width: 500px;
+
+  margin: auto;
+}
+
+.search-box input {
+  width: 100%;
+
+  padding: 16px 25px;
+
+  border-radius: 40px;
+
+  border: none;
+
+  outline: none;
+
+  background: white;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  font-size: 1rem;
+}
+
+/*==================================================
+        GRID
+==================================================*/
+
+.gift-container {
+  padding: 20px;
+}
+
+.gift-grid {
+  max-width: 1300px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+  gap: 25px;
+}
+
+/*==================================================
+        CARD
+==================================================*/
+
+.gift-card {
+  background: white;
+
+  border-radius: var(--radius);
+
+  overflow: hidden;
+
+  box-shadow: var(--shadow);
+
+  transition: 0.35s;
+
+  position: relative;
+}
+
+.gift-card:hover {
+  transform: translateY(-10px);
+}
+
+.gift-image {
+  height: 220px;
+
+  overflow: hidden;
+
+  background: #f7edf5;
+}
+
+.gift-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.5s;
+}
+
+.gift-card:hover img {
+  transform: scale(1.08);
+}
+
+.gift-content {
+  padding: 25px;
+}
+
+.category {
+  font-size: 0.8rem;
+
+  color: #b06bb9;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+}
+
+.gift-content h3 {
+  margin: 12px 0;
+
+  color: var(--title);
+
+  font-size: 1.15rem;
+}
+
+.description {
+  font-size: 0.9rem;
+
+  line-height: 1.6;
+
+  color: #777;
+
+  min-height: 45px;
+}
+
+/*==================================================
+        RESERVE BUTTON
+==================================================*/
+
+.reserve-btn {
+  display: block;
+
+  margin-top: 20px;
+
+  text-align: center;
+
+  padding: 14px;
+
+  border-radius: 40px;
+
+  text-decoration: none;
+
+  color: white;
+
+  font-weight: 600;
+
+  background: linear-gradient(135deg, #f4a7c7, #d9b8ff);
+
+  transition: 0.3s;
+}
+
+.reserve-btn:hover {
+  transform: scale(1.04);
+
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.3);
+}
+
+/*==================================================
+        FOOTER
+==================================================*/
+
+footer {
+  padding: 70px 20px;
+}
+
+.footer-card {
+  max-width: 700px;
+
+  margin: auto;
+
+  text-align: center;
+
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 35px;
+
+  box-shadow: var(--shadow);
+}
+
+.footer-card h2 {
+  color: #b06bb9;
+
+  margin-bottom: 15px;
+}
+
+.back {
+  display: inline-block;
+
+  margin-top: 25px;
+
+  color: #b06bb9;
+
+  text-decoration: none;
+}
+
+/*==================================================
+        TOP BUTTON
+==================================================*/
+
+#topButton {
+  position: fixed;
+
+  bottom: 25px;
+
+  right: 25px;
+
+  width: 50px;
+
+  height: 50px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #d4af37;
+
+  color: white;
+
+  font-size: 25px;
+
+  cursor: pointer;
+
+  display: none;
+}
+
+/*==================================================
+        MOBILE
+==================================================*/
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero {
+    padding: 30px 20px;
+  }
+
+  .filters {
+    justify-content: flex-start;
+  }
+
+  .gift-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gift-image {
+    height: 250px;
+  }
+}

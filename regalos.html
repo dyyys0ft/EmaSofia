@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Lista de Regalos | Baby Shower Ema Sofía</title>
+
+    <meta name="theme-color" content="#f8d8ea" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/regalos.css" />
+  </head>
+
+  <body>
+    <div class="background"></div>
+
+    <header>
+      <div class="hero">
+        <span class="subtitle"> Baby Shower </span>
+
+        <h1>Ema Sofía</h1>
+
+        <p>
+          Tu presencia será nuestro mejor regalo. Si deseas tener un detalle
+          para nuestra pequeña, puedes escoger cualquiera de los siguientes
+          regalos.
+        </p>
+      </div>
+    </header>
+
+    <!--========================================
+            FILTROS
+=========================================-->
+
+    <section class="filters">
+      <button class="filter active" data-filter="all">Todos</button>
+
+      <button class="filter" data-filter="alimentacion">🍼 Alimentación</button>
+
+      <button class="filter" data-filter="panales">🩷 Pañales</button>
+
+      <button class="filter" data-filter="ropa">👗 Ropa</button>
+
+      <button class="filter" data-filter="bano">🛁 Baño</button>
+
+      <button class="filter" data-filter="paseo">🚼 Paseo</button>
+
+      <button class="filter" data-filter="juguetes">🧸 Juguetes</button>
+
+      <button class="filter" data-filter="cuidado">💖 Cuidado</button>
+    </section>
+
+    <!--========================================
+            BUSCADOR
+=========================================-->
+
+    <section class="search-section">
+      <div class="search-box">
+        <input type="text" id="search" placeholder="Buscar un regalo..." />
+      </div>
+    </section>
+
+    <!--========================================
+            GRID
+=========================================-->
+
+    <section class="gift-container">
+      <div class="gift-grid" id="giftGrid"></div>
+    </section>
+
+    <!--========================================
+            FOOTER
+=========================================-->
+
+    <footer>
+      <div class="footer-card">
+        <h2>Gracias por acompañarnos ❤️</h2>
+
+        <p>
+          Cada detalle será recibido con muchísimo amor. Lo más importante será
+          compartir contigo este momento tan especial.
+        </p>
+
+        <a href="index.html" class="back"> ← Volver a la invitación </a>
+      </div>
+    </footer>
+
+    <button id="topButton">↑</button>
+
+    <script src="js/regalos.js"></script>
+  </body>
+</html>

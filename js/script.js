@@ -177,18 +177,6 @@ boxes.forEach((box) => {
 });
 
 /*=========================================
-        BOTÓN HERO
-=========================================*/
-
-document.querySelector(".hero-button").addEventListener("click", (e) => {
-  e.preventDefault();
-
-  document.querySelector("#gifts").scrollIntoView({
-    behavior: "smooth",
-  });
-});
-
-/*=========================================
         APARICIÓN HERO
 =========================================*/
 
