@@ -6,7 +6,7 @@
 // Formato internacional sin + ni espacios
 // Ecuador: 593XXXXXXXXX
 
-const whatsappNumber = "593999999999";
+const whatsappNumber = "593993530332";
 
 /*==================================================
         LISTA DE REGALOS
