@@ -29,7 +29,7 @@ function updateCountdown() {
                 font-weight:bold;
                 padding:30px;
             ">
-                🎉 ¡Hoy celebramos la llegada de Ema Sofía! 🐇💕
+                🎉 ¡Hoy celebramos la llegada de Emma Sofía! 🐇💕
             </div>
 
         `;

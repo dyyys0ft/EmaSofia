@@ -51,7 +51,7 @@ const gifts = [
     name: "Pañales talla RN",
     category: "panales",
     image: "assets/regalos/panales-rn.jpg",
-    description: "Pañales para los primeros días de Ema Sofía.",
+    description: "Pañales para los primeros días de Emma Sofía.",
   },
 
   {
@@ -83,7 +83,7 @@ const gifts = [
     name: "Mameluco de algodón rosa",
     category: "ropa",
     image: "assets/regalos/mameluco.jpg",
-    description: "Ropa cómoda y suave para Ema Sofía.",
+    description: "Ropa cómoda y suave para Emma Sofía.",
   },
 
   {
@@ -155,7 +155,7 @@ const gifts = [
     name: "Coche para bebé",
     category: "paseo",
     image: "assets/regalos/coche.jpg",
-    description: "Para paseos cómodos con Ema Sofía.",
+    description: "Para paseos cómodos con Emma Sofía.",
   },
 
   {
@@ -249,7 +249,7 @@ function renderGifts(list) {
   giftGrid.innerHTML = "";
 
   list.forEach((gift) => {
-    const message = `Hola 😊 quiero reservar el regalo "${gift.name}" para el Baby Shower de Ema Sofía 🎀`;
+    const message = `Hola 😊 quiero reservar el regalo "${gift.name}" para el Baby Shower de Emma Sofía 🎀`;
 
     const whatsapp = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
