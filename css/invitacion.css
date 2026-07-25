@@ -1,0 +1,1018 @@
+/*==========================================================
+                INVITACION.CSS
+                Baby Shower Emma Sofía
+==========================================================*/
+
+/*==========================================================
+                    GOOGLE VARIABLES
+==========================================================*/
+
+:root {
+  --pink: #fceaf4;
+  --pink-soft: #fff5fa;
+
+  --purple: #e9d8ff;
+  --purple-dark: #a06ac6;
+
+  --gold: #d4af37;
+
+  --title: #6b4a82;
+
+  --text: #666666;
+
+  --white: #ffffff;
+
+  --shadow: 0 15px 45px rgba(125, 90, 150, 0.12);
+}
+
+/*==========================================================
+                        RESET
+==========================================================*/
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+
+  color: var(--text);
+
+  background: linear-gradient(
+    180deg,
+    #fff9fc,
+    #fff4fb 35%,
+
+    #f8f1ff 100%
+  );
+
+  overflow-x: hidden;
+}
+
+/*==========================================================
+                DECORACION FONDO
+==========================================================*/
+
+body::before {
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(255, 215, 235, 0.8),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(230, 220, 255, 0.9),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 70% 80%,
+      rgba(255, 240, 248, 0.9),
+      transparent 30%
+    );
+
+  z-index: -3;
+}
+
+body::after {
+  content: "🐇";
+
+  position: fixed;
+
+  right: 40px;
+
+  bottom: 40px;
+
+  font-size: 60px;
+
+  opacity: 0.05;
+
+  animation: float 6s ease-in-out infinite;
+}
+
+/*==========================================================
+                    FONDOS
+==========================================================*/
+
+section {
+  padding: 100px 20px;
+}
+
+.container {
+  max-width: 1200px;
+
+  margin: auto;
+}
+
+/*==========================================================
+                    HERO
+==========================================================*/
+
+.album-hero {
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* nube */
+
+.album-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 600px;
+
+  height: 600px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.55),
+    transparent 70%
+  );
+
+  top: -200px;
+
+  left: -150px;
+
+  z-index: -1;
+}
+
+/* nube */
+
+.album-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 700px;
+
+  height: 700px;
+
+  background: radial-gradient(
+    circle,
+    rgba(238, 220, 255, 0.55),
+    transparent 70%
+  );
+
+  bottom: -250px;
+
+  right: -180px;
+
+  z-index: -1;
+}
+
+/*==========================================================
+                TARJETA PRINCIPAL
+==========================================================*/
+
+.album-card {
+  width: 100%;
+
+  max-width: 900px;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  backdrop-filter: blur(18px);
+
+  border-radius: 40px;
+
+  padding: 70px;
+
+  text-align: center;
+
+  box-shadow: var(--shadow);
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+/*==========================================================
+                    SUBTITULO
+==========================================================*/
+
+.album-subtitle {
+  color: var(--purple-dark);
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+}
+
+/*==========================================================
+                    TITULO
+==========================================================*/
+
+.album-card h1 {
+  margin: 25px 0;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: 6rem;
+
+  background: linear-gradient(
+    90deg,
+    #9b741c,
+    #fff1aa,
+    #d4af37,
+    #ffe57d,
+    #9b741c
+  );
+
+  background-size: 300%;
+
+  color: transparent;
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  animation: gold 9s linear infinite;
+}
+
+/*==========================================================
+                PARRAFO
+==========================================================*/
+
+.album-card p {
+  max-width: 650px;
+
+  margin: auto;
+
+  line-height: 2;
+
+  font-size: 1.08rem;
+}
+
+/*==========================================================
+            SEPARADOR DECORATIVO
+==========================================================*/
+
+.album-card::after {
+  content: "🌸 🐇 🌸";
+
+  display: block;
+
+  margin-top: 35px;
+
+  font-size: 30px;
+
+  opacity: 0.7;
+}
+
+/*==========================================================
+            INDICADOR SCROLL
+==========================================================*/
+
+.scroll-down {
+  position: absolute;
+
+  bottom: 30px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  color: #b06bb9;
+
+  font-size: 0.9rem;
+
+  text-align: center;
+
+  animation: bounce 2s infinite;
+}
+
+.scroll-down span {
+  display: block;
+
+  font-size: 28px;
+}
+
+/*==========================================================
+                    ALBUM
+==========================================================*/
+
+.album-section {
+  padding: 110px 20px;
+
+  position: relative;
+}
+
+.album-section::before {
+  content: "🌸";
+
+  position: absolute;
+
+  left: 5%;
+
+  top: 60px;
+
+  font-size: 55px;
+
+  opacity: 0.08;
+}
+
+.album-section::after {
+  content: "🐰";
+
+  position: absolute;
+
+  right: 5%;
+
+  bottom: 80px;
+
+  font-size: 55px;
+
+  opacity: 0.08;
+}
+
+/*==========================================================
+                TITULO DEL ALBUM
+==========================================================*/
+
+.section-title {
+  max-width: 750px;
+
+  margin: auto;
+
+  text-align: center;
+
+  margin-bottom: 70px;
+}
+
+.section-title span {
+  display: inline-block;
+
+  padding: 10px 22px;
+
+  border-radius: 30px;
+
+  background: linear-gradient(135deg, #ffe6f1, #ead8ff);
+
+  color: var(--purple-dark);
+
+  font-size: 0.9rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.section-title h2 {
+  margin: 25px 0;
+
+  font-size: 3rem;
+
+  color: var(--title);
+
+  line-height: 1.2;
+}
+
+.section-title p {
+  max-width: 620px;
+
+  margin: auto;
+
+  line-height: 1.9;
+}
+
+/*==========================================================
+                GRID POLAROID
+==========================================================*/
+
+.album-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 55px;
+
+  align-items: start;
+}
+
+/*==========================================================
+                POLAROID
+==========================================================*/
+
+.polaroid {
+  background: white;
+
+  padding: 18px;
+
+  padding-bottom: 35px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+
+  transition: 0.45s;
+
+  position: relative;
+}
+
+.rotate-left {
+  transform: rotate(-4deg);
+}
+
+.rotate-right {
+  transform: rotate(4deg);
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) translateY(-10px) scale(1.05);
+
+  z-index: 100;
+}
+
+/*==========================================================
+                CHINCHETA
+==========================================================*/
+
+.polaroid::before {
+  content: "📌";
+
+  position: absolute;
+
+  left: 50%;
+
+  top: -18px;
+
+  transform: translateX(-50%);
+
+  font-size: 32px;
+}
+
+/*==========================================================
+                FOTO
+==========================================================*/
+
+.photo {
+  width: 100%;
+
+  height: 340px;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #ffe8f3, #eee2ff);
+
+  border: 3px dashed #dcc4ff;
+}
+
+.photo img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.5s;
+}
+
+.polaroid:hover img {
+  transform: scale(1.08);
+}
+
+/*==========================================================
+                TEXTO POLAROID
+==========================================================*/
+
+.caption {
+  margin-top: 18px;
+
+  text-align: center;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: 2rem;
+
+  color: #666;
+}
+
+/*==========================================================
+                MENSAJE
+==========================================================*/
+
+.family-message {
+  padding: 110px 20px;
+}
+
+.message-card {
+  max-width: 900px;
+
+  margin: auto;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  backdrop-filter: blur(15px);
+
+  border-radius: 35px;
+
+  padding: 70px;
+
+  text-align: center;
+
+  box-shadow: var(--shadow);
+}
+
+.message-card h2 {
+  font-size: 3rem;
+
+  color: var(--title);
+
+  margin-bottom: 30px;
+}
+
+.message-card p {
+  font-size: 1.08rem;
+
+  line-height: 2;
+
+  margin-bottom: 25px;
+}
+
+.message-card strong {
+  color: #c06ad5;
+}
+
+/*==========================================================
+                BOTON
+==========================================================*/
+
+.primary-button {
+  display: inline-block;
+
+  margin-top: 20px;
+
+  padding: 18px 42px;
+
+  border-radius: 45px;
+
+  text-decoration: none;
+
+  color: white;
+
+  font-weight: 600;
+
+  font-size: 1rem;
+
+  background: linear-gradient(135deg, #f5a9c8, #d9b8ff);
+
+  box-shadow: 0 10px 25px rgba(160, 120, 200, 0.25);
+
+  transition: 0.35s;
+}
+
+.primary-button:hover {
+  transform: translateY(-4px) scale(1.05);
+
+  box-shadow: 0 20px 35px rgba(160, 120, 200, 0.3);
+}
+
+/*==========================================================
+                EFECTO BRILLO
+==========================================================*/
+
+.primary-button {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.primary-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: -120%;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+
+  transition: 0.8s;
+}
+
+.primary-button:hover::before {
+  left: 120%;
+}
+/*==========================================================
+                ANIMACIONES
+==========================================================*/
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+@keyframes gold {
+  from {
+    background-position: 0%;
+  }
+
+  to {
+    background-position: 300%;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+}
+
+/*==========================================================
+                ENTRADAS
+==========================================================*/
+
+.album-card {
+  animation: fadeUp 1.2s ease;
+}
+
+.section-title {
+  animation: fadeUp 1.2s ease;
+}
+
+.rotate-left {
+  animation: fadeLeft 1.3s ease;
+}
+
+.rotate-right {
+  animation: fadeRight 1.3s ease;
+}
+
+.message-card {
+  animation: fadeUp 1.2s ease;
+}
+
+/*==========================================================
+                DECORACIONES
+==========================================================*/
+
+.album-section {
+  position: relative;
+}
+
+.album-section .flower1,
+.album-section .flower2,
+.album-section .flower3 {
+  position: absolute;
+
+  font-size: 32px;
+
+  opacity: 0.18;
+
+  animation: float 5s ease-in-out infinite;
+}
+
+.flower1 {
+  top: 120px;
+
+  left: 40px;
+}
+
+.flower2 {
+  right: 60px;
+
+  top: 260px;
+
+  animation-delay: 2s;
+}
+
+.flower3 {
+  left: 10%;
+
+  bottom: 100px;
+
+  animation-delay: 4s;
+}
+
+/*==========================================================
+                SCROLLBAR
+==========================================================*/
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff6fb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d8b7ff;
+
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c59cf5;
+}
+
+/*==========================================================
+                SELECCION
+==========================================================*/
+
+::selection {
+  background: #f7d7e7;
+
+  color: #7a4b91;
+}
+
+/*==========================================================
+                LINKS
+==========================================================*/
+
+a {
+  transition: 0.3s;
+}
+
+img {
+  display: block;
+
+  width: 100%;
+}
+
+/*==========================================================
+                RESPONSIVE 1024
+==========================================================*/
+
+@media (max-width: 1024px) {
+  .album-card {
+    padding: 50px;
+  }
+
+  .album-card h1 {
+    font-size: 5rem;
+  }
+
+  .section-title h2 {
+    font-size: 2.5rem;
+  }
+
+  .message-card {
+    padding: 55px;
+  }
+}
+
+/*==========================================================
+                RESPONSIVE TABLET
+==========================================================*/
+
+@media (max-width: 768px) {
+  section {
+    padding: 70px 18px;
+  }
+
+  .album-card {
+    padding: 35px 25px;
+
+    border-radius: 28px;
+  }
+
+  .album-card h1 {
+    font-size: 3.8rem;
+  }
+
+  .album-card p {
+    font-size: 0.98rem;
+  }
+
+  .section-title {
+    margin-bottom: 45px;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .album-grid {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .rotate-left,
+  .rotate-right {
+    transform: none;
+  }
+
+  .photo {
+    height: 280px;
+  }
+
+  .caption {
+    font-size: 1.6rem;
+  }
+
+  .message-card {
+    padding: 35px 25px;
+
+    border-radius: 28px;
+  }
+
+  .message-card h2 {
+    font-size: 2rem;
+  }
+
+  .message-card p {
+    font-size: 0.96rem;
+  }
+
+  .primary-button {
+    width: 100%;
+
+    text-align: center;
+
+    padding: 18px;
+  }
+
+  body::after {
+    font-size: 40px;
+
+    right: 15px;
+
+    bottom: 15px;
+  }
+}
+
+/*==========================================================
+                RESPONSIVE MOBILE
+==========================================================*/
+
+@media (max-width: 480px) {
+  .album-card {
+    padding: 25px 18px;
+  }
+
+  .album-card h1 {
+    font-size: 3rem;
+  }
+
+  .album-card::after {
+    font-size: 22px;
+  }
+
+  .section-title span {
+    font-size: 0.8rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.7rem;
+  }
+
+  .section-title p {
+    font-size: 0.9rem;
+  }
+
+  .photo {
+    height: 220px;
+  }
+
+  .caption {
+    font-size: 1.35rem;
+  }
+
+  .message-card {
+    padding: 28px 18px;
+  }
+
+  .message-card h2 {
+    font-size: 1.7rem;
+  }
+
+  .message-card p {
+    font-size: 0.92rem;
+
+    line-height: 1.8;
+  }
+
+  .primary-button {
+    font-size: 0.95rem;
+  }
+}
+
+/*==========================================================
+                HOVERS
+==========================================================*/
+
+.polaroid {
+  cursor: pointer;
+}
+
+.polaroid:hover {
+  box-shadow: 0 35px 60px rgba(160, 120, 200, 0.25);
+}
+
+.message-card:hover {
+  transform: translateY(-4px);
+
+  transition: 0.4s;
+}
+
+.album-card:hover {
+  transform: translateY(-4px);
+
+  transition: 0.4s;
+}
+
+/*==========================================================
+                FIN
+==========================================================*/
