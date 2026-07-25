@@ -16,7 +16,7 @@ const gifts = [
   {
     id: 1,
     name: "Biberón de vidrio libre de BPA",
-    category: "alimentacion",
+    category: "alimentacion ",
     image: "assets/regalos/biberon-vidrio.jpg",
     description:
       "Biberón seguro de vidrio, libre de plástico y materiales tóxicos.",
