@@ -507,3 +507,33 @@ RESPONSIVE
     font-size: 1.7rem;
   }
 }
+
+.location-frame {
+  max-width: 720px;
+
+  margin: 40px auto 0;
+
+  padding: 14px 14px 35px;
+
+  background: white;
+
+  border-radius: 12px;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+
+  transform: rotate(-1.5deg);
+
+  transition: 0.4s;
+}
+
+.location-frame:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.location-image {
+  display: block;
+
+  width: 100%;
+
+  border-radius: 8px;
+}
