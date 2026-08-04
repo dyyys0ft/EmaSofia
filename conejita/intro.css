@@ -1,0 +1,436 @@
+/*==================================================
+    RESET
+==================================================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  font-family: "Poppins", sans-serif;
+}
+
+/*==================================================
+    VARIABLES
+==================================================*/
+
+:root {
+  --pink: #fce7f3;
+  --pink-dark: #f5b8d5;
+
+  --purple: #e9d8fd;
+  --purple-dark: #a779e9;
+
+  --gold: #d4af37;
+
+  --white: #ffffff;
+}
+
+/*==================================================
+    INTRO
+==================================================*/
+
+#intro {
+  position: fixed;
+
+  inset: 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    #fffdfe 0%,
+    #fff5fb 35%,
+    #f8f0ff 70%,
+    #fffdfe 100%
+  );
+
+  z-index: 99999;
+}
+
+/*==================================================
+    FONDO
+==================================================*/
+
+.background {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 20% 15%,
+      rgba(255, 255, 255, 0.9),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(238, 215, 255, 0.6),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(255, 214, 234, 0.45),
+      transparent 45%
+    );
+}
+
+/*==================================================
+    CIRCULOS
+==================================================*/
+
+.circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(8px);
+
+  animation: floatCircle 10s ease-in-out infinite;
+}
+
+.c1 {
+  width: 250px;
+
+  height: 250px;
+
+  background: rgba(255, 204, 229, 0.35);
+
+  left: -100px;
+
+  top: -80px;
+}
+
+.c2 {
+  width: 180px;
+
+  height: 180px;
+
+  background: rgba(226, 205, 255, 0.3);
+
+  right: -70px;
+
+  top: 150px;
+
+  animation-delay: 2s;
+}
+
+.c3 {
+  width: 320px;
+
+  height: 320px;
+
+  background: rgba(255, 239, 210, 0.22);
+
+  bottom: -150px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  animation-delay: 4s;
+}
+
+@keyframes floatCircle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/*==================================================
+    CONEJITA
+==================================================*/
+
+#bunnyContainer {
+  position: relative;
+
+  width: min(45vw, 220px);
+
+  max-width: 220px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 10;
+
+  animation: floatBunny 3s ease-in-out infinite;
+}
+
+#bunny {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+}
+
+@keyframes floatBunny {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+@media (max-width: 768px) {
+  #bunnyContainer {
+    width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  #bunnyContainer {
+    width: 150px;
+  }
+}
+
+@keyframes goldMove {
+  from {
+    background-position: 0%;
+  }
+
+  to {
+    background-position: 250%;
+  }
+}
+
+.introText p {
+  color: #78647f;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .introText {
+    width: 90%;
+
+    bottom: 25px;
+
+    padding: 18px;
+  }
+
+  .introText h1 {
+    font-size: 48px;
+  }
+
+  .introText p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .introText {
+    width: 92%;
+
+    bottom: 18px;
+
+    padding: 16px;
+
+    border-radius: 22px;
+  }
+
+  .introText h1 {
+    font-size: 38px;
+  }
+
+  .introText p {
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+}
+
+/*==================================================
+    TEXTO
+==================================================*/
+
+.introText h1 {
+  font-family: "Great Vibes", cursive;
+
+  font-size: 72px;
+
+  color: var(--gold);
+
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.introText {
+  position: absolute;
+
+  bottom: 35px;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  animation: fadeUp 2s ease;
+}
+
+.introCard {
+  width: min(90%, 500px);
+
+  background: rgba(255, 255, 255, 0.85);
+
+  border-radius: 30px;
+
+  padding: 22px;
+
+  text-align: center;
+}
+
+/*==================================================
+    CORAZON
+==================================================*/
+
+#heart {
+  position: absolute;
+
+  top: -20px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 38px;
+
+  opacity: 0;
+}
+
+/*==================================================
+    FLORES
+==================================================*/
+
+#flowers {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  overflow: hidden;
+}
+
+/*==================================================
+    FLASH
+==================================================*/
+
+#flash {
+  position: fixed;
+
+  inset: 0;
+
+  background: white;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  z-index: 999999;
+}
+
+/*==================================================
+    WEBSITE
+==================================================*/
+
+#website {
+  opacity: 0;
+
+  transition: opacity 1.5s ease;
+}
+
+#website.show {
+  opacity: 1;
+}
+
+/*==================================================
+    ANIMACIONES
+==================================================*/
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+@media (max-width: 900px) {
+  .introText h1 {
+    font-size: 58px;
+  }
+}
+
+@media (max-width: 768px) {
+  #bunnyContainer {
+    width: min(82vw, 300px);
+  }
+
+  .introText h1 {
+    font-size: 46px;
+  }
+
+  .introText p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  #bunnyContainer {
+    width: 88vw;
+
+    max-width: 250px;
+  }
+
+  .introText {
+    margin-top: 20px;
+
+    padding: 0 20px;
+  }
+
+  .introText h1 {
+    font-size: 38px;
+  }
+
+  .introText p {
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+}
