@@ -224,3 +224,11 @@ window.addEventListener("scroll", () => {
     arrow.style.opacity = 1;
   }
 });
+
+if (localStorage.getItem("introPlayed")) {
+  // Saltar intro
+} else {
+  localStorage.setItem("introPlayed", "true");
+
+  startAnimation();
+}

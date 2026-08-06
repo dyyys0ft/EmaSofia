@@ -181,3 +181,16 @@ function showWebsite() {
     document.body.style.overflow = "auto";
   }, 1500);
 }
+
+const params = new URLSearchParams(window.location.search);
+
+window.addEventListener("load", () => {
+  if (params.has("skipIntro")) {
+    intro.style.display = "none";
+    website.classList.add("show");
+    document.body.style.overflow = "auto";
+    return;
+  }
+
+  startAnimation();
+});

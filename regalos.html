@@ -90,13 +90,27 @@
           Cada detalle será recibido con muchísimo amor. Lo más importante será
           compartir contigo este momento tan especial.
         </p>
-
-        <a href="index.html" class="back"> ← Volver a la invitación </a>
       </div>
     </footer>
-
+    <a href="index.html?skipIntro=1" class="primary-button"> Continuar </a>
     <button id="topButton">↑</button>
 
-    <script src="js/regalos.js"></script>
+    <script type="module" src="js/regalos.js"></script>
+
+    <div id="reservationModal" class="modal">
+      <div class="modal-card">
+        <h2>🎁 Reservar regalo</h2>
+
+        <p id="giftSelected"></p>
+
+        <input type="text" id="guestName" placeholder="Ingresa tu nombre" />
+
+        <div class="modal-buttons">
+          <button id="cancelReserve">Cancelar</button>
+
+          <button id="confirmReserve">Reservar</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

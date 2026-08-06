@@ -1,12 +1,15 @@
+import {
+  collection,
+  addDoc,
+  getDocs,
+  query,
+  where,
+} from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
+import { db } from "./firebase.js";
+
 /*==================================================
         CONFIGURACIÓN WHATSAPP
 ==================================================*/
-
-// Cambia este número por el WhatsApp real
-// Formato internacional sin + ni espacios
-// Ecuador: 593XXXXXXXXX
-
-const whatsappNumber = "593993530332";
 
 /*==================================================
         LISTA DE REGALOS
@@ -249,10 +252,6 @@ function renderGifts(list) {
   giftGrid.innerHTML = "";
 
   list.forEach((gift) => {
-    const message = `Hola 😊 quiero reservar el regalo "${gift.name}" para el Baby Shower de Emma Sofía 🎀`;
-
-    const whatsapp = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-
     const card = document.createElement("article");
 
     card.className = "gift-card";
@@ -294,14 +293,13 @@ ${gift.description}
 </p>
 
 
-<a
-href="${whatsapp}"
-target="_blank"
-class="reserve-btn">
+<button
+class="reserve-btn"
+data-id="${gift.id}">
 
 💗 Reservar
 
-</a>
+</button>
 
 
 </div>
@@ -309,6 +307,11 @@ class="reserve-btn">
 `;
 
     giftGrid.appendChild(card);
+  });
+  document.querySelectorAll(".reserve-btn").forEach((btn) => {
+    btn.onclick = () => {
+      openReservation(btn.dataset.id);
+    };
   });
 }
 
@@ -373,3 +376,93 @@ topButton.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+const modal = document.getElementById("reservationModal");
+
+const selected = document.getElementById("giftSelected");
+
+const guest = document.getElementById("guestName");
+
+const confirm = document.getElementById("confirmReserve");
+
+const cancel = document.getElementById("cancelReserve");
+
+let currentGift = null;
+
+function openReservation(id) {
+  currentGift = gifts.find((g) => g.id == id);
+
+  selected.innerHTML = `<strong>${currentGift.name}</strong>`;
+
+  guest.value = "";
+
+  modal.classList.add("show");
+}
+
+cancel.onclick = () => {
+  modal.classList.remove("show");
+};
+
+confirm.onclick = reserveGift;
+
+async function reserveGift() {
+  const nombre = guest.value.trim();
+
+  if (nombre == "") {
+    alert("Ingresa tu nombre");
+
+    return;
+  }
+
+  const reservas = collection(db, "reservas");
+
+  const existe = query(
+    reservas,
+
+    where("id", "==", currentGift.id),
+  );
+
+  const docs = await getDocs(existe);
+
+  if (!docs.empty) {
+    alert("Este regalo ya fue reservado.");
+
+    modal.classList.remove("show");
+
+    loadReserved();
+
+    return;
+  }
+
+  await addDoc(reservas, {
+    id: currentGift.id,
+
+    nombre: nombre,
+
+    articulo: currentGift.name,
+
+    fecha: new Date().toISOString(),
+  });
+
+  modal.classList.remove("show");
+
+  alert("¡Gracias por reservar!");
+
+  loadReserved();
+}
+
+async function loadReserved() {
+  const snapshot = await getDocs(collection(db, "reservas"));
+
+  const ids = [];
+
+  snapshot.forEach((doc) => {
+    ids.push(doc.data().id);
+  });
+
+  const disponibles = gifts.filter((g) => !ids.includes(g.id));
+
+  renderGifts(disponibles);
+}
+
+loadReserved();
