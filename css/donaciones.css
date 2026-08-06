@@ -359,3 +359,108 @@ body::after {
     font-size: 0.9rem;
   }
 }
+
+/*==========================================
+        THANK YOU
+===========================================*/
+
+#thanksOverlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.4s;
+
+  z-index: 999999;
+}
+
+#thanksOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.thanks-card {
+  background: rgba(255, 255, 255, 0.82);
+
+  backdrop-filter: blur(20px);
+
+  padding: 45px 35px;
+
+  border-radius: 30px;
+
+  text-align: center;
+
+  max-width: 420px;
+
+  width: 90%;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+
+  animation: popup 0.6s ease;
+}
+
+#bigHeart {
+  font-size: 90px;
+
+  animation: heartPop 1s ease forwards;
+}
+
+.thanks-card h2 {
+  margin-top: 15px;
+
+  color: #b06bb9;
+}
+
+.thanks-card p {
+  margin-top: 18px;
+
+  line-height: 1.8;
+
+  color: #666;
+}
+
+.petal {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  font-size: 24px;
+
+  pointer-events: none;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes heartPop {
+  0% {
+    transform: scale(0.2);
+  }
+
+  60% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
