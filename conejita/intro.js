@@ -16,7 +16,7 @@ const website = document.getElementById("website");
 const CONFIG = {
   bunnyAppear: 1000,
   bunnyFloat: 2000,
-  //heart: 1000,
+  heart: 3000,
   flowers: 3000,
   flash: 3500,
   reveal: 4800,
