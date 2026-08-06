@@ -3,7 +3,7 @@
 =========================================*/
 
 // Año, Mes (0-11), Día, Hora, Minuto
-const eventDate = new Date(2026, 7, 29, 15, 0, 0);
+const eventDate = new Date(2026, 7, 22, 15, 0, 0);
 
 const days = document.getElementById("days");
 const hours = document.getElementById("hours");

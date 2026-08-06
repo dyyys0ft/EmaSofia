@@ -14,12 +14,12 @@ const website = document.getElementById("website");
 //==================================================
 
 const CONFIG = {
-  bunnyAppear: 500,
-  bunnyFloat: 2500,
-  heart: 4000,
-  flowers: 5500,
-  flash: 8500,
-  reveal: 9800,
+  bunnyAppear: 1000,
+  bunnyFloat: 2000,
+  //heart: 1000,
+  flowers: 3000,
+  flash: 3500,
+  reveal: 4800,
 };
 
 //==================================================
@@ -40,7 +40,7 @@ function startAnimation() {
   // Respiración
 
   setTimeout(() => {
-    bunny.style.animation = "breathe 2.5s ease-in-out infinite";
+    bunny.style.animation = "breathe 1.5s ease-in-out infinite";
   }, CONFIG.bunnyFloat);
 
   // Corazón
@@ -86,7 +86,7 @@ function showHeart() {
       },
     ],
     {
-      duration: 1800,
+      duration: 800,
 
       easing: "ease-out",
     },
@@ -140,7 +140,7 @@ function createFlowerExplosion() {
         },
       ],
       {
-        duration: 3000,
+        duration: 1500,
 
         easing: "ease-out",
       },
@@ -148,7 +148,7 @@ function createFlowerExplosion() {
 
     flowers.appendChild(flower);
 
-    setTimeout(() => flower.remove(), 3000);
+    setTimeout(() => flower.remove(), 1500);
   }
 }
 
@@ -158,7 +158,7 @@ function createFlowerExplosion() {
 
 function showFlash() {
   flash.animate([{ opacity: 0 }, { opacity: 1 }, { opacity: 0 }], {
-    duration: 1500,
+    duration: 500,
 
     easing: "ease",
   });
@@ -169,7 +169,7 @@ function showFlash() {
 //==================================================
 
 function showWebsite() {
-  intro.style.transition = "opacity 1.5s";
+  intro.style.transition = "opacity 1s";
 
   intro.style.opacity = "0";
 

@@ -530,3 +530,65 @@ footer {
 #cancelReserve {
   background: #eee;
 }
+
+/*==================================================
+        PRIMARY BUTTON
+==================================================*/
+
+.primary-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.primary-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 220px;
+  max-width: 320px;
+  width: 100%;
+
+  padding: 16px 32px;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+
+  background: linear-gradient(135deg, #f4a7c7, #d9b8ff);
+
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.25);
+
+  transition: 0.3s ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(212, 175, 55, 0.35);
+}
+
+.primary-button:active {
+  transform: scale(0.98);
+}
+
+/*================ MOBILE ================*/
+
+@media (max-width: 768px) {
+  .primary-button-container {
+    margin: 40px auto;
+    padding: 0 18px;
+  }
+
+  .primary-button {
+    max-width: 100%;
+    padding: 18px 20px;
+    font-size: 17px;
+  }
+}
