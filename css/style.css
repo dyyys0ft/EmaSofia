@@ -821,3 +821,19 @@ RESPONSIVE
     transform: scale(0.75);
   }
 }
+
+.contribucion-section,
+.regalos-section {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0.7),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(236, 210, 255, 0.6),
+      transparent 45%
+    ),
+    linear-gradient(135deg, #ffe9f5, #f7efff, #fff9fd);
+}
