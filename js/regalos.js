@@ -234,15 +234,43 @@ const gifts = [
     id: 27,
     name: "Zapatos",
     category: "ropa",
-    image: "assets/regalos/zapaticos.jpg",
+    
     description: "Pequeños y cómodos.",
   },
   {
     id: 90,
     name: "Body manga corta",
     category: "ropa",
-    image: "assets/regalos/zapaticos.jpg",
+    
     description: "Para mantener el calor de la bebé.",
+  },
+  {
+    id: 91,
+    name: "Monito Tejido",
+    category: "ropa",
+    
+    description: "Para mantener el calor de la bebé.",
+  },
+  {
+    id: 92,
+    name: "Busitos",
+    category: "ropa",
+    
+    description: "Para mantener el calor de la bebé.",
+  },
+  {
+    id: 93,
+    name: "Suéteres tejidos a mano",
+    category: "ropa",
+    
+    description: "Para mantener el calor de la bebé.",
+  },
+  {
+    id: 94,
+    name: "Conjunto recién Nacido",
+    category: "ropa",
+    
+    description: "Para su primera salida al mundo.",
   },
   {
     id: 28,
