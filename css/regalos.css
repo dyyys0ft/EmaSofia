@@ -592,3 +592,239 @@ footer {
     font-size: 17px;
   }
 }
+
+.modal {
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition: 0.35s;
+
+  display: flex;
+}
+
+.modal.show {
+  opacity: 1;
+
+  pointer-events: auto;
+}
+#toast {
+  position: fixed;
+
+  left: 50%;
+
+  bottom: 35px;
+
+  transform: translateX(-50%) translateY(40px);
+
+  background: white;
+
+  color: #b06bb9;
+
+  padding: 18px 30px;
+
+  border-radius: 40px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+
+  font-weight: 600;
+
+  z-index: 999999;
+
+  opacity: 0;
+
+  transition: 0.4s;
+}
+
+#toast.show {
+  opacity: 1;
+
+  transform: translateX(-50%) translateY(0);
+}
+
+.toast {
+  position: fixed;
+
+  left: 50%;
+  bottom: 40px;
+
+  transform: translateX(-50%) translateY(100px);
+
+  background: white;
+
+  padding: 18px 30px;
+
+  border-radius: 40px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+
+  color: #6d4a75;
+
+  font-weight: 600;
+
+  z-index: 99999;
+
+  opacity: 0;
+
+  transition: 0.45s;
+}
+
+.toast.show {
+  opacity: 1;
+
+  transform: translateX(-50%) translateY(0);
+}
+
+/*==========================
+        TOAST
+===========================*/
+
+.toast {
+  position: fixed;
+
+  left: 50%;
+
+  bottom: 35px;
+
+  transform: translate(-50%, 120px);
+
+  opacity: 0;
+
+  transition: 0.4s;
+
+  z-index: 999999;
+
+  pointer-events: none;
+}
+
+.toast.show {
+  opacity: 1;
+
+  transform: translate(-50%, 0);
+}
+
+.toast-content {
+  background: rgba(255, 255, 255, 0.96);
+
+  backdrop-filter: blur(12px);
+
+  border-radius: 20px;
+
+  padding: 18px 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+}
+
+.toast-icon {
+  font-size: 34px;
+}
+
+.toast-message {
+  font-weight: 600;
+
+  color: #7a557e;
+}
+
+.gift-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.reserved-ribbon {
+  position: absolute;
+
+  top: 22px;
+  right: -58px;
+
+  width: 220px;
+
+  padding: 10px 0;
+
+  background: linear-gradient(135deg, #e91e63, #ff6fa8);
+
+  color: white;
+
+  text-align: center;
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+  transform: rotate(45deg);
+
+  z-index: 100;
+
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+
+  letter-spacing: 0.3px;
+
+  line-height: 1.3;
+}
+
+.reserved-ribbon strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-top: 3px;
+}
+
+.reserve-btn.reserved {
+  background: #b7b7b7;
+
+  cursor: not-allowed;
+
+  opacity: 0.85;
+}
+
+.reserve-btn.reserved:hover {
+  transform: none;
+
+  box-shadow: none;
+}
+
+.reserve-btn.reserved {
+  background: #b8b8b8;
+
+  cursor: not-allowed;
+
+  opacity: 0.8;
+}
+
+.gift-card {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.reserved-ribbon {
+  position: absolute;
+
+  top: 18px;
+
+  right: -45px;
+
+  width: 180px;
+
+  background: #d4af37;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 10px 0;
+
+  transform: rotate(45deg);
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  z-index: 1000;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+}

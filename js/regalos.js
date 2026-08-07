@@ -1,3 +1,4 @@
+import { db } from "./firebase.js";
 import {
   collection,
   addDoc,
@@ -5,8 +6,6 @@ import {
   query,
   where,
 } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
-import { db } from "./firebase.js";
-
 /*==================================================
         CONFIGURACIÓN WHATSAPP
 ==================================================*/
@@ -248,55 +247,81 @@ function renderGifts(list) {
 
     card.innerHTML = `
 
+        ${
+          gift.reservado
+            ? `
+            <div class="reserved-ribbon">
+                Reservado por<br>
+                <strong>${gift.nombre}</strong>
+            </div>
+        `
+            : ""
+        }
 
+       
 
-<div class="gift-content">
+        <div class="gift-content">
 
+            <span class="category">
+                ${gift.category}
+            </span>
 
-<span class="category">
+            <h3>
+                ${gift.name}
+            </h3>
 
-${gift.category}
+            <p class="description">
+                ${gift.description}
+            </p>
 
-</span>
+            ${
+              gift.reservado
+                ? `
+                <button class="reserve-btn reserved" disabled>
+                    💖 Reservado
+                </button>
+                `
+                : `
+                <button
+                    class="reserve-btn"
+                    data-id="${gift.id}">
+                    💗 Reservar
+                </button>
+                `
+            }
 
+        </div>
 
-<h3>
-
-${gift.name}
-
-</h3>
-
-
-<p class="description">
-
-${gift.description}
-
-</p>
-
-
-<button
-class="reserve-btn"
-data-id="${gift.id}">
-
-💗 Reservar
-
-</button>
-
-
-</div>
-
-`;
+        `;
 
     giftGrid.appendChild(card);
   });
-  document.querySelectorAll(".reserve-btn").forEach((btn) => {
+
+  // Agregar eventos a los botones nuevos
+  document.querySelectorAll(".reserve-btn:not(.reserved)").forEach((btn) => {
     btn.onclick = () => {
       openReservation(btn.dataset.id);
     };
   });
 }
 
-renderGifts(gifts);
+function showToast(message) {
+  const toast = document.getElementById("toast");
+
+  const text = document.getElementById("toastText");
+
+  if (!toast || !text) return;
+
+  text.innerHTML = message;
+
+  toast.classList.add("show");
+
+  clearTimeout(window.toastTimer);
+
+  window.toastTimer = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 3000);
+}
 
 /*==================================================
         FILTROS
@@ -313,10 +338,16 @@ buttons.forEach((button) => {
     const category = button.dataset.filter;
 
     if (category === "all") {
-      renderGifts(gifts);
-    } else {
-      renderGifts(gifts.filter((gift) => gift.category === category));
+      renderGifts(availableGifts);
+
+      return;
     }
+
+    const filtered = availableGifts.filter(
+      (gift) => gift.category === category,
+    );
+
+    renderGifts(filtered);
   });
 });
 
@@ -329,7 +360,7 @@ const search = document.getElementById("search");
 search.addEventListener("input", () => {
   const value = search.value.toLowerCase();
 
-  const result = gifts.filter((gift) =>
+  const result = availableGifts.filter((gift) =>
     gift.name.toLowerCase().includes(value),
   );
 
@@ -390,7 +421,7 @@ async function reserveGift() {
   const nombre = guest.value.trim();
 
   if (nombre == "") {
-    alert("Ingresa tu nombre");
+    showToast("✏️ Ingresa tu nombre.");
 
     return;
   }
@@ -406,7 +437,7 @@ async function reserveGift() {
   const docs = await getDocs(existe);
 
   if (!docs.empty) {
-    alert("Este regalo ya fue reservado.");
+    showToast("🎁 Este regalo ya fue reservado.");
 
     modal.classList.remove("show");
 
@@ -427,7 +458,7 @@ async function reserveGift() {
 
   modal.classList.remove("show");
 
-  alert("¡Gracias por reservar!");
+  showToast("💖 ¡Muchas gracias por tu regalo!");
 
   loadReserved();
 }
@@ -435,15 +466,83 @@ async function reserveGift() {
 async function loadReserved() {
   const snapshot = await getDocs(collection(db, "reservas"));
 
-  const ids = [];
-
-  snapshot.forEach((doc) => {
-    ids.push(doc.data().id);
+  // Limpiar estado anterior
+  gifts.forEach((gift) => {
+    gift.reservado = false;
+    gift.nombre = "";
   });
 
-  const disponibles = gifts.filter((g) => !ids.includes(g.id));
+  snapshot.forEach((doc) => {
+    const reserva = doc.data();
 
-  renderGifts(disponibles);
+    const gift = gifts.find((g) => Number(g.id) === Number(reserva.id));
+
+    if (gift) {
+      gift.reservado = true;
+      gift.nombre = reserva.nombre;
+    }
+  });
+
+  availableGifts = [...gifts];
+
+  renderGifts(availableGifts);
 }
 
 loadReserved();
+
+let availableGifts = [];
+
+const ribbon = gift.reservado
+  ? `
+<div class="reserved-ribbon">
+    Reservado por<br>
+    <strong>${gift.nombre}</strong>
+</div>`
+  : "";
+
+card.innerHTML = `
+${ribbon}
+
+<div class="gift-image">
+    <img
+        src="${gift.image}"
+        alt="${gift.name}"
+        loading="lazy"
+        onerror="this.src='assets/regalos/default.jpg'">
+</div>
+
+<div class="gift-content">
+
+    <span class="category">${gift.category}</span>
+
+    <h3>${gift.name}</h3>
+
+    <p class="description">${gift.description}</p>
+
+    ${
+      gift.reservado
+        ? `<button class="reserve-btn reserved" disabled>
+              💝 Ya reservado
+           </button>`
+        : `<button class="reserve-btn"
+              data-id="${gift.id}">
+              💗 Reservar
+           </button>`
+    }
+
+</div>
+`;
+
+snapshot.forEach((doc) => {
+  const data = doc.data();
+
+  const gift = gifts.find((g) => g.id === data.id);
+
+  if (gift) {
+    gift.reservado = true;
+
+    gift.nombre = data.nombre;
+  }
+});
+
+renderGifts(gifts);
