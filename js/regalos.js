@@ -67,15 +67,127 @@ const gifts = [
     description: "Para sus primeros días.",
   },
   {
+    id: 58,
+    name: "Pañales Huggies talla RN",
+    category: "panales",
+    image: "assets/regalos/panales-rn.jpg",
+    description: "Para sus primeros días.",
+  },
+  {
+    id: 59,
+    name: "Pañales Huggies talla RN",
+    category: "panales",
+    image: "assets/regalos/panales-rn.jpg",
+    description: "Para sus primeros días.",
+  },
+  {
+    id: 60,
+    name: "Pañales Huggies talla RN",
+    category: "panales",
+    image: "assets/regalos/panales-rn.jpg",
+    description: "Para sus primeros días.",
+  },
+  {
     id: 12,
     name: "Pañales Huggies talla 1 ",
     category: "panales",
     image: "assets/regalos/panales-1.jpg",
     description: "Perfectos para las primeras semanas.",
   },
+  {
+    id: 54,
+    name: "Pañales Huggies talla 1 ",
+    category: "panales",
+    image: "assets/regalos/panales-1.jpg",
+    description: "Perfectos para las primeras semanas.",
+  },
+  {
+    id: 55,
+    name: "Pañales Huggies talla 1 ",
+    category: "panales",
+    image: "assets/regalos/panales-1.jpg",
+    description: "Perfectos para las primeras semanas.",
+  },
+  {
+    id: 56,
+    name: "Pañales Huggies talla 1 ",
+    category: "panales",
+    image: "assets/regalos/panales-1.jpg",
+    description: "Perfectos para las primeras semanas.",
+  },
+  {
+    id: 57,
+    name: "Pañales Huggies talla 1 ",
+    category: "panales",
+    image: "assets/regalos/panales-1.jpg",
+    description: "Perfectos para las primeras semanas.",
+  },
+  {
+    id: 61,
+    name: "Pañales Huggies talla 2 ",
+    category: "panales",
+    image: "assets/regalos/panales-1.jpg",
+    description: "Perfectos para los primeras mese.",
+  },
+  {
+    id: 62,
+    name: "Pañales Huggies talla 2 ",
+    category: "panales",
+    image: "assets/regalos/panales-1.jpg",
+    description: "Perfectos para los primeras mese.",
+  },
+  {
+    id: 63,
+    name: "Pañales Huggies talla 2 ",
+    category: "panales",
+    image: "assets/regalos/panales-1.jpg",
+    description: "Perfectos para los primeras mese.",
+  },
+  {
+    id: 64,
+    name: "Pañales Huggies talla 2 ",
+    category: "panales",
+    image: "assets/regalos/panales-1.jpg",
+    description: "Perfectos para los primeras mese.",
+  },
+  {
+    id: 65,
+    name: "Pañales Huggies talla 2 ",
+    category: "panales",
+    image: "assets/regalos/panales-1.jpg",
+    description: "Perfectos para los primeras mese.",
+  },
 
   {
     id: 15,
+    name: "Toallitas húmedas",
+    category: "panales",
+    image: "assets/regalos/toallitas.jpg",
+    description: "Especiales para piel delicada.",
+  },
+  {
+    id: 66,
+    name: "Toallitas húmedas",
+    category: "panales",
+    image: "assets/regalos/toallitas.jpg",
+    description: "Especiales para piel delicada.",
+  },
+  {
+    id: 67,
+    name: "Toallitas húmedas",
+    category: "panales",
+    image: "assets/regalos/toallitas.jpg",
+    description: "Especiales para piel delicada.",
+  },
+  {
+    id: 68,
+    name: "Toallitas húmedas",
+    category: "panales",
+    image: "assets/regalos/toallitas.jpg",
+    description: "Especiales para piel delicada.",
+  },
+  {
+    id: 69,
     name: "Toallitas húmedas",
     category: "panales",
     image: "assets/regalos/toallitas.jpg",
@@ -124,6 +236,13 @@ const gifts = [
     category: "ropa",
     image: "assets/regalos/zapaticos.jpg",
     description: "Pequeños y cómodos.",
+  },
+  {
+    id: 90,
+    name: "Body manga corta",
+    category: "ropa",
+    image: "assets/regalos/zapaticos.jpg",
+    description: "Para mantener el calor de la bebé.",
   },
   {
     id: 28,
@@ -177,6 +296,20 @@ const gifts = [
     description: "Juego de sábanas suaves.",
   },
   {
+    id: 70,
+    name: "Fular para amarcar bebés",
+    category: "cuidado",
+    image: "assets/regalos/sabanas.jpg",
+    description: "Porta Bebés.",
+  },
+  {
+    id: 71,
+    name: "Alfombra antigolpes",
+    category: "cuidado",
+    image: "assets/regalos/sabanas.jpg",
+    description: "Alfombra para sus primeros gateos y pasos",
+  },
+  {
     id: 41,
     name: "Protector impermeable para colchón",
     category: "cuidado",
@@ -228,6 +361,53 @@ const gifts = [
     category: "juguetes",
     image: "assets/regalos/gimnasio.jpg",
     description: "Favorece el desarrollo motriz y sensorial.",
+  },
+  {
+    id: 80,
+    name: "Peluche de apego",
+    category: "juguetes",
+    description:
+      "Peluche suave y seguro para acompañar a Emma Sofía durante sus primeros meses, brindándole tranquilidad y comodidad.",
+  },
+
+  {
+    id: 81,
+    name: "Cuna Corral Colecho",
+    category: "descanso",
+    description:
+      "Cuna práctica y segura que permite mantener a la bebé cerca durante el descanso, facilitando el cuidado nocturno.",
+  },
+
+  {
+    id: 82,
+    name: "Colchón para bebé",
+    category: "descanso",
+    description:
+      "Colchón diseñado para brindar soporte, comodidad y un descanso adecuado durante los primeros meses de Emma Sofía.",
+  },
+
+  {
+    id: 83,
+    name: "Pañalera",
+    category: "accesorios",
+    description:
+      "Bolso organizador ideal para llevar pañales, ropa y todos los accesorios necesarios para las salidas con la bebé.",
+  },
+
+  {
+    id: 84,
+    name: "Termómetro para bañera",
+    category: "bano",
+    description:
+      "Accesorio que permite controlar la temperatura del agua para que el baño de Emma Sofía sea seguro y confortable.",
+  },
+
+  {
+    id: 85,
+    name: "Kit de aseo bebé",
+    category: "cuidado",
+    description:
+      "Kit con accesorios esenciales para la higiene diaria y el cuidado de la piel delicada de la bebé.",
   },
 ];
 
