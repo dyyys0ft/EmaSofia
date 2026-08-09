@@ -36,28 +36,6 @@ const gifts = [
     image: "assets/regalos/esterilizador.jpg",
     description: "Mantiene limpios los accesorios del bebé.",
   },
-  {
-    id: 4,
-    name: "Calienta biberones",
-    category: "alimentacion",
-    image: "assets/regalos/calienta-biberon.jpg",
-    description: "Calienta la leche rápidamente.",
-  },
-  {
-    id: 5,
-    name: "Cepillo limpia biberones",
-    category: "alimentacion",
-    image: "assets/regalos/cepillo-biberon.jpg",
-    description: "Limpieza profunda para biberones.",
-  },
-
-  {
-    id: 7,
-    name: "Baberos impermeables",
-    category: "alimentacion",
-    image: "assets/regalos/baberos.jpg",
-    description: "Protegen la ropa durante las comidas.",
-  },
 
   {
     id: 11,
@@ -68,10 +46,10 @@ const gifts = [
   },
   {
     id: 58,
-    name: "Mecedora eléctrica",
+    name: "Asiento carro para bebè",
     category: "Cuidado",
     image: "assets/regalos/panales-rn.jpg",
-    description: "Para dormir rapido a la bebé",
+    description: "Para llevarla con nosotros a todas partes",
   },
   {
     id: 59,
@@ -203,13 +181,7 @@ const gifts = [
     image: "assets/regalos/manta-algodon.jpg",
     description: "Ideal para el descanso.",
   },
-  {
-    id: 40,
-    name: "Sábanas para cuna",
-    category: "cuidado",
-    image: "assets/regalos/sabanas.jpg",
-    description: "Juego de sábanas suaves.",
-  },
+
   {
     id: 70,
     name: "Fular para amarcar bebés",
@@ -326,7 +298,7 @@ const gifts = [
   },
   {
     id: 100,
-    name: "Mecedoraé",
+    name: "Mecedora Eléctrica",
     category: "cuidado",
     description: "Mecedora para dormir a la bebé",
   },
