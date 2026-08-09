@@ -113,13 +113,8 @@
           </a>
 
           
-        <button
-          class="next-section"
-          onclick="goToSection('location')"
-          aria-label="Continuar"
-        >
-          ↓
-        </button>
+        <button class="next-section" type="button" aria-label="Ir a la siguiente sección">
+</button>
       </section>
 
       <!--==========================================
@@ -163,13 +158,8 @@
             </a>
           </div>
         </div>
-        <button
-          class="next-section"
-          onclick="goToSection('donations')"
-          aria-label="Continuar"
-        >
-          ↓
-        </button>
+        <button class="next-section" type="button" aria-label="Ir a la siguiente sección">
+</button>
       </section>
 
       <!--==========================================
@@ -193,13 +183,9 @@
             Ver Datos Bancarios
           </a>
         </div>
-        <button
-          class="next-section"
-          onclick="goToSection('gifts')"
-          aria-label="Continuar"
-        >
-          ↓
-        </button>
+        <button class="next-section" type="button" aria-label="Ir a la siguiente sección">
+</button>
+        
       </section>
 
       <!--==========================================
@@ -224,13 +210,8 @@
             Ver Lista de Regalos
           </a>
         </div>
-        <button
-          class="next-section"
-          onclick="goToSection('footer')"
-          aria-label="Continuar"
-        >
-          ↓
-        </button>
+        <button class="next-section" type="button" aria-label="Ir a la siguiente sección">
+</button>
       </section>
 
       <!--==========================================
@@ -250,17 +231,23 @@
 
     <script src="conejita/intro.js"></script>
     <script src="js/script.js"></script>
-  <script>
-  function goToSection(sectionId) {
-    const section = document.getElementById(sectionId);
+<script>
+document.querySelectorAll(".next-section").forEach((button) => {
+  button.addEventListener("click", () => {
+    const currentSection = button.closest(".hero, .section");
 
-    if (!section) return;
+    if (!currentSection) return;
 
-    section.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  }
+    const nextSection = currentSection.nextElementSibling;
+
+    if (nextSection) {
+      nextSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  });
+});
 </script>
   </body>
 </html>

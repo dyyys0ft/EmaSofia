@@ -404,71 +404,6 @@ footer {
    FLOATING NEXT SECTION BUTTON
 ================================================== */
 
-.next-section {
-  position: absolute;
-
-  left: 50%;
-  bottom: 18px;
-
-  transform: translateX(-50%);
-
-  width: 48px;
-  height: 48px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 0;
-
-  border: 1px solid rgba(184, 137, 156, 0.25);
-
-  border-radius: 50%;
-
-  background: rgba(255, 255, 255, 0.78);
-
-  color: #b8899c;
-
-  font-family: "Poppins", sans-serif;
-
-  font-size: 28px;
-
-  line-height: 1;
-
-  cursor: pointer;
-
-  z-index: 9999;
-
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-
-  -webkit-tap-highlight-color: transparent;
-
-  animation: floatingArrow 2s ease-in-out infinite;
-}
-
-.next-section:hover {
-  background: rgba(255, 255, 255, 0.95);
-}
-
-.next-section:active {
-  transform: translateX(-50%) scale(0.88);
-}
-
-@keyframes floatingArrow {
-  0%,
-  100% {
-    transform: translateX(-50%) translateY(0);
-
-    opacity: 0.6;
-  }
-
-  50% {
-    transform: translateX(-50%) translateY(6px);
-
-    opacity: 1;
-  }
-}
-
 /* ==================================================
    SECTIONS
 ================================================== */
@@ -1213,15 +1148,6 @@ footer p {
      ARROW
   ------------------------------------------------ */
 
-  .next-section {
-    width: 42px;
-    height: 42px;
-
-    bottom: 12px;
-
-    font-size: 25px;
-  }
-
   /* -----------------------------------------------
      SECTIONS
   ------------------------------------------------ */
@@ -1393,10 +1319,6 @@ footer p {
 
     padding-right: max(15px, env(safe-area-inset-right));
   }
-
-  .next-section {
-    bottom: max(12px, env(safe-area-inset-bottom));
-  }
 }
 
 /* ==================================================
@@ -1428,5 +1350,97 @@ footer p {
 
     padding-left: 8px;
     padding-right: 8px;
+  }
+}
+
+/* ==================================================
+   FLECHA - SIGUIENTE SECCIÓN
+================================================== */
+
+.next-section {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid rgba(184, 137, 156, 0.25);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.78);
+
+  cursor: pointer;
+  z-index: 9999;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+  -webkit-tap-highlight-color: transparent;
+
+  transform: translateX(-50%);
+}
+
+/* Flecha creada con CSS */
+.next-section::before {
+  content: "";
+
+  width: 11px;
+  height: 11px;
+
+  border-right: 2px solid #b8899c;
+  border-bottom: 2px solid #b8899c;
+
+  transform: rotate(45deg) translate(-2px, -2px);
+
+  animation: arrowMovement 1.6s ease-in-out infinite;
+}
+
+/* Hover */
+.next-section:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Click */
+.next-section:active {
+  transform: translateX(-50%) scale(0.88);
+}
+
+/* ==================================================
+   ANIMACIÓN
+================================================== */
+
+@keyframes arrowMovement {
+  0%,
+  100% {
+    transform: rotate(45deg) translate(-2px, -2px);
+    opacity: 0.45;
+  }
+
+  50% {
+    transform: rotate(45deg) translate(3px, 3px);
+    opacity: 1;
+  }
+}
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+  .next-section {
+    width: 42px;
+    height: 42px;
+    bottom: 12px;
+  }
+
+  .next-section::before {
+    width: 10px;
+    height: 10px;
   }
 }
