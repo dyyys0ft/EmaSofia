@@ -68,10 +68,10 @@ const gifts = [
   },
   {
     id: 58,
-    name: "Pañales Huggies talla RN",
-    category: "panales",
+    name: "Mecedora eléctrica",
+    category: "Cuidado",
     image: "assets/regalos/panales-rn.jpg",
-    description: "Para sus primeros días.",
+    description: "Para dormir rapido a la bebé",
   },
   {
     id: 59,
@@ -79,119 +79,6 @@ const gifts = [
     category: "panales",
     image: "assets/regalos/panales-rn.jpg",
     description: "Para sus primeros días.",
-  },
-  {
-    id: 60,
-    name: "Pañales Huggies talla RN",
-    category: "panales",
-    image: "assets/regalos/panales-rn.jpg",
-    description: "Para sus primeros días.",
-  },
-  {
-    id: 12,
-    name: "Pañales Huggies talla 1 ",
-    category: "panales",
-    image: "assets/regalos/panales-1.jpg",
-    description: "Perfectos para las primeras semanas.",
-  },
-  {
-    id: 54,
-    name: "Pañales Huggies talla 1 ",
-    category: "panales",
-    image: "assets/regalos/panales-1.jpg",
-    description: "Perfectos para las primeras semanas.",
-  },
-  {
-    id: 55,
-    name: "Pañales Huggies talla 1 ",
-    category: "panales",
-    image: "assets/regalos/panales-1.jpg",
-    description: "Perfectos para las primeras semanas.",
-  },
-  {
-    id: 56,
-    name: "Pañales Huggies talla 1 ",
-    category: "panales",
-    image: "assets/regalos/panales-1.jpg",
-    description: "Perfectos para las primeras semanas.",
-  },
-  {
-    id: 57,
-    name: "Pañales Huggies talla 1 ",
-    category: "panales",
-    image: "assets/regalos/panales-1.jpg",
-    description: "Perfectos para las primeras semanas.",
-  },
-  {
-    id: 61,
-    name: "Pañales Huggies talla 2 ",
-    category: "panales",
-    image: "assets/regalos/panales-1.jpg",
-    description: "Perfectos para los primeras mese.",
-  },
-  {
-    id: 62,
-    name: "Pañales Huggies talla 2 ",
-    category: "panales",
-    image: "assets/regalos/panales-1.jpg",
-    description: "Perfectos para los primeras mese.",
-  },
-  {
-    id: 63,
-    name: "Pañales Huggies talla 2 ",
-    category: "panales",
-    image: "assets/regalos/panales-1.jpg",
-    description: "Perfectos para los primeras mese.",
-  },
-  {
-    id: 64,
-    name: "Pañales Huggies talla 2 ",
-    category: "panales",
-    image: "assets/regalos/panales-1.jpg",
-    description: "Perfectos para los primeras mese.",
-  },
-  {
-    id: 65,
-    name: "Pañales Huggies talla 2 ",
-    category: "panales",
-    image: "assets/regalos/panales-1.jpg",
-    description: "Perfectos para los primeras mese.",
-  },
-
-  {
-    id: 15,
-    name: "Toallitas húmedas",
-    category: "panales",
-    image: "assets/regalos/toallitas.jpg",
-    description: "Especiales para piel delicada.",
-  },
-  {
-    id: 66,
-    name: "Toallitas húmedas",
-    category: "panales",
-    image: "assets/regalos/toallitas.jpg",
-    description: "Especiales para piel delicada.",
-  },
-  {
-    id: 67,
-    name: "Toallitas húmedas",
-    category: "panales",
-    image: "assets/regalos/toallitas.jpg",
-    description: "Especiales para piel delicada.",
-  },
-  {
-    id: 68,
-    name: "Toallitas húmedas",
-    category: "panales",
-    image: "assets/regalos/toallitas.jpg",
-    description: "Especiales para piel delicada.",
-  },
-  {
-    id: 69,
-    name: "Toallitas húmedas",
-    category: "panales",
-    image: "assets/regalos/toallitas.jpg",
-    description: "Especiales para piel delicada.",
   },
 
   {
@@ -234,42 +121,42 @@ const gifts = [
     id: 27,
     name: "Zapatos",
     category: "ropa",
-    
+
     description: "Pequeños y cómodos.",
   },
   {
     id: 90,
     name: "Body manga corta",
     category: "ropa",
-    
+
     description: "Para mantener el calor de la bebé.",
   },
   {
     id: 91,
     name: "Monito Tejido",
     category: "ropa",
-    
+
     description: "Para mantener el calor de la bebé.",
   },
   {
     id: 92,
     name: "Busitos",
     category: "ropa",
-    
+
     description: "Para mantener el calor de la bebé.",
   },
   {
     id: 93,
     name: "Suéteres tejidos a mano",
     category: "ropa",
-    
+
     description: "Para mantener el calor de la bebé.",
   },
   {
     id: 94,
     name: "Conjunto recién Nacido",
     category: "ropa",
-    
+
     description: "Para su primera salida al mundo.",
   },
   {
@@ -436,6 +323,12 @@ const gifts = [
     category: "cuidado",
     description:
       "Kit con accesorios esenciales para la higiene diaria y el cuidado de la piel delicada de la bebé.",
+  },
+  {
+    id: 100,
+    name: "Mecedoraé",
+    category: "cuidado",
+    description: "Mecedora para dormir a la bebé",
   },
 ];
 
