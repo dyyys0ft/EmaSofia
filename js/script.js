@@ -232,3 +232,24 @@ if (localStorage.getItem("introPlayed")) {
 
   startAnimation();
 }
+
+reserveButton.addEventListener("click", async () => {
+  // 🔒 Se bloquea ANTES de comenzar Firebase
+  reserveButton.disabled = true;
+  reserveButton.textContent = "Guardando...";
+
+  try {
+    await addDoc(collection(db, "reservas"), {
+      // tus datos...
+    });
+
+    reserveButton.textContent = "✓ Reservado";
+  } catch (error) {
+    console.error(error);
+
+    reserveButton.disabled = false;
+    reserveButton.textContent = "Reservar";
+
+    alert("Ocurrió un error al guardar la reserva.");
+  }
+});

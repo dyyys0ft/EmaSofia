@@ -7,8 +7,14 @@
 
     <title>Lista de Regalos | Baby Shower Emma Sofía</title>
 
+    <meta
+      name="description"
+      content="Lista de regalos para el Baby Shower de Emma Sofía"
+    />
+
     <meta name="theme-color" content="#f8d8ea" />
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,15 +24,24 @@
       rel="stylesheet"
     />
 
+    <!-- CSS -->
     <link rel="stylesheet" href="css/regalos.css" />
   </head>
 
   <body>
+    <!-- ==========================================
+         BACKGROUND
+    =========================================== -->
+
     <div class="background"></div>
+
+    <!-- ==========================================
+         HERO
+    =========================================== -->
 
     <header>
       <div class="hero">
-        <span class="subtitle"> Baby Shower </span>
+        <span class="subtitle">🐇 Baby Shower 🐇</span>
 
         <h1>Emma Sofía</h1>
 
@@ -39,9 +54,9 @@
       </div>
     </header>
 
-    <!--========================================
-            FILTROS
-=========================================-->
+    <!-- ==========================================
+         FILTROS
+    =========================================== -->
 
     <section class="filters">
       <button class="filter active" data-filter="all">Todos</button>
@@ -59,27 +74,32 @@
       <button class="filter" data-filter="cuidado">💖 Cuidado</button>
     </section>
 
-    <!--========================================
-            BUSCADOR
-=========================================-->
+    <!-- ==========================================
+         BUSCADOR
+    =========================================== -->
 
     <section class="search-section">
       <div class="search-box">
-        <input type="text" id="search" placeholder="Buscar un regalo..." />
+        <input
+          type="text"
+          id="search"
+          placeholder="Buscar un regalo..."
+          autocomplete="off"
+        />
       </div>
     </section>
 
-    <!--========================================
-            GRID
-=========================================-->
+    <!-- ==========================================
+         GRID DE REGALOS
+    =========================================== -->
 
-    <section class="gift-container">
+    <main class="gift-container">
       <div class="gift-grid" id="giftGrid"></div>
-    </section>
+    </main>
 
-    <!--========================================
-            FOOTER
-=========================================-->
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
 
     <footer>
       <div class="footer-card">
@@ -91,39 +111,68 @@
         </p>
       </div>
     </footer>
+
+    <!-- ==========================================
+         BOTÓN CONTINUAR
+    =========================================== -->
+
     <div class="primary-button-container">
       <a href="index.html?skipIntro=1" class="primary-button"> 🐇 Continuar </a>
     </div>
-    <button id="topButton">↑</button>
 
-    <script type="module" src="js/regalos.js"></script>
+    <!-- ==========================================
+         BOTÓN VOLVER ARRIBA
+    =========================================== -->
 
-    <div id="reservationModal" class="modal">
+    <button id="topButton" type="button" aria-label="Volver arriba">↑</button>
+
+    <!-- ==========================================
+         MODAL DE RESERVA
+    =========================================== -->
+
+    <div
+      id="reservationModal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="reservationTitle"
+    >
       <div class="modal-card">
-        <h2>🎁 Reservar regalo</h2>
+        <h2 id="reservationTitle">🎁 Reservar regalo</h2>
 
         <p id="giftSelected"></p>
 
-        <input type="text" id="guestName" placeholder="Ingresa tu nombre" />
+        <input
+          type="text"
+          id="guestName"
+          placeholder="Ingresa tu nombre"
+          autocomplete="name"
+        />
 
         <div class="modal-buttons">
-          <button id="cancelReserve">Cancelar</button>
+          <button id="cancelReserve" type="button">Cancelar</button>
 
-          <button id="confirmReserve">Reservar</button>
+          <button id="confirmReserve" type="button">💗 Reservar</button>
         </div>
       </div>
     </div>
-    <div id="toast" class="toast">
-      <span id="toastText"></span>
-    </div>
-    <!-- Toast -->
 
-    <div id="toast" class="toast">
+    <!-- ==========================================
+         TOAST / NOTIFICACIONES
+    =========================================== -->
+
+    <div id="toast" class="toast" role="status" aria-live="polite">
       <div class="toast-content">
         <div class="toast-icon">💖</div>
 
         <div class="toast-message" id="toastText"></div>
       </div>
     </div>
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script type="module" src="js/regalos.js"></script>
   </body>
 </html>
